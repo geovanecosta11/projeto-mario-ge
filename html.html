@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/tela.css">
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    
+
+    <title>Super Mario Bros - O Filme</title>
+</head>
+<body>
+     <div class="fundo-video">
+    <video  class="video " autoplay loop muted >
+        <source src="./image/video-mario.mp4" type="video/mp4">
+    </video>
+    </div>  
+    <header class="cabecalho">
+        <a >
+            <img src="./image/logo-chapeu-mario.png" alt="" class="logo">
+        </a>
+        <nav >
+            <ul class="menu"> 
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#"> Detalhes </a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="informacao">
+            <img src="./image/titulo.png" alt="" class="imagem-titulo">
+            <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti doloribus velit consectetur veniam sapiente? Fugiat pariatur sequi cupiditate omnis expedita, incidunt ea ipsum a repellat impedit! Fugit iste repudiandae eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <button class="botao-trailer"> Veja o trailer</button>
+        </div>
+        <img src="./image/super-mario-chars.png" alt="" class="mario">
+        <div class="modal"> 
+            <div class="conteudo-modal"> 
+                <span class="fechar-modal">x</span>
+                <iframe id="video" width="560" height="315"  
+                 src="./Trailer Oficia.mp4" title="treiler oficial" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!--coloca arquico em cima de outro arquivo no html-->
+            </div>
+        </div>
+    </main>
+<script src="./css/index.js"></script>
+</body>
+</html>

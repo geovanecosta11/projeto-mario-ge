@@ -1,0 +1,172 @@
+@font-face {
+    font-family: poppins-thin;
+    src: url('./Poppins/Poppins-Thin.ttf');
+}
+
+@font-face {
+    font-family: poppins-light;
+    src: url('./Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: poppins-medium;
+    src: url('./Poppins/Poppins-Medium.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*tira o acrecimo do paddin margin e borda */
+}
+ul{
+    list-style: none; /*tirar efeitos da lista*/
+}
+a{
+    text-decoration: none;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+body{
+    font-family: poppins-medium;
+}
+.cabecalho{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* um em cada ponta ou no espaço no meio para separar*/
+    padding: 30px;
+    max-width: 1440px; /* tamanho do cabecario */
+    margin: 0 auto; /* esta centralizandro o cabecario com margem vertical 0, e automatico horizontal*/
+}
+
+.logo {
+    max-width: 65px;
+    margin-left: 20px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    height: 100%;        /* so centralizou porque esta pegando 100% da largura */
+   
+}
+li{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    
+}
+a{
+    color: white;
+}
+li:hover{
+background-color: #d5011d;
+transition: 1s;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: calc(100vh-132px);    /*(VH=height) altura da tela do visualizador , tamnho da tela da pessoa */
+    padding: 0 30px 30px; /* esta colocando 0 de top 30px baixo e 30px cada lado direito e esquerdo*/
+    
+}
+
+.imagem-titulo{
+    max-width: 500px;
+
+}
+
+.descricao{
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+    text-align: justify;
+}
+.botao-trailer{
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase; /*uppercase transforma em maisculo*/
+    transition: 0.5s all ease-in-out;
+    background-color: #d5011d;
+}
+    .botao-trailer:hover{
+        transform: scale(1.1); /*ele aumenta 1.1 de tamanho uma escala */ 
+    }
+    .fundo-video{
+       background-color: #d5011d;
+        position: absolute; /* COLOCOU EM CIMA DE TUDO QUE FOI CRIADO ESTA A FRENTE ,Z-INDEX COLOCOU PARA TRAZ*/
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden; /* ajustar o que passou ou que transbordou (barra de rolagem) */
+    }
+    .video{
+        height: 100vh;
+        width: 100vw;
+       
+    }
+    .fundo-video::after{     /*after depois  before antes  , que e criado no css nao usa html*/
+        content: "";  /* toda vez que usar after tem que usar content*/
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%,  rgba(0,0,0,0.8) 50%, rgba(0,0,0,1)100%);
+    }
+
+    .modal{
+        
+        position: fixed;  /* fica fixa na mesma posição*/
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(52,52,50,0.749);
+        opacity: 0;/*  opacidade esconde mais tira os efeitos dos conteudos*/
+        visibility: hidden; /* escoder o video,so opacidade esconde mais tira os efeitos dos conteudos*/
+      
+    }
+    .conteudo-modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 5px;
+        gap: 15px; /* espaço entre os conteudos*/
+
+    }
+    .fechar-modal{
+        background: white;
+        color: #f03a17;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        width: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    iframe{
+        border-width: 0;
+        width: 640px;
+        height: 360px;
+    }
+    .modal.aberto{
+        opacity: 1;
+       visibility: visible;
+    }
+    
